@@ -1,1 +1,2 @@
-/Settings/Secure.env
+# Ignore the .Env
+Secure.Env
