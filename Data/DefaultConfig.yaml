@@ -5,6 +5,7 @@ Launch Settings:
   Reset Mode: False
   Web Server: False
 
+# Permission Setup
 Roles:
   # < Role ID >: 
   #   - < Permission Key >
@@ -14,3 +15,7 @@ Users:
   # < User ID >:
   #   - < Permission Key >
   #   - < Permission Key ( If multiple needed ) >
+
+Everyone:
+  # - < Permission Key >
+  # - < Permission Key ( If multiple needed ) >
