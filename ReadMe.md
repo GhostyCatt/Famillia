@@ -7,7 +7,7 @@
 
 ## Permission Hierarchy
 
-```Note: The bot first checks the UserID permissions and then checks the RoleID permissions.```
+```Note: The bot first checks the UserID permissions and then checks their top Role permissions.```
 
 **Permission Keys**
 - `is_owner`: can run all the commands and features
