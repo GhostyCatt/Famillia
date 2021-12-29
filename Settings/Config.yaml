@@ -7,15 +7,12 @@ Launch Settings:
 
 # Permission Setup
 Roles:
-  # < Role ID >: 
-  #   - < Permission Key >
-  #   - < Permission Key ( If multiple needed ) >
+  904959906006851584: 
+    - is_owner
 
 Users:
-  # < User ID >:
-  #   - < Permission Key >
-  #   - < Permission Key ( If multiple needed ) >
+  543041032648917022:
+    - is_owner
 
 Everyone:
-  # - < Permission Key >
-  # - < Permission Key ( If multiple needed ) >
+  - is_member
