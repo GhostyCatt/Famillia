@@ -7,10 +7,11 @@
 
 ## Permission Hierarchy
 
-```Note: The bot first checks the UserID permissions and then checks their top Role permissions.```
+```Note: The permissions associated overwrite the permissions that users role gives them.```
 
 **Permission Keys**
 - `is_owner`: can run all the commands and features
+- `can_timeout`: can timeout users
 
 
 ## Running The Bot

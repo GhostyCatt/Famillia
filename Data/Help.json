@@ -1,0 +1,11 @@
+{
+    "Admin": [
+        {
+            "Name": "Timeout",
+            "Description": "⏱️ Timeout a user ( Basically mute them )",
+            "Arguments": [
+                "User", "Time"
+            ]
+        }
+    ]
+}
