@@ -17,7 +17,7 @@ class Admin(commands.Cog):
         user: nextcord.Member = nextcord.SlashOption(name = "user", description = "The user you want to timeout", required = True),
         time: str = nextcord.SlashOption(name = "time", description = "How long do you want to timeout the user?", required = True)
     ):
-        if not permissionCheck(interaction.user, interaction, 'can_timeout'): 
+        if not permissionCheck(interaction.user, 'can_timeout'): 
             await interaction.response.send_message(f"You can't run this command", ephemeral = True)
             return
         
