@@ -2,21 +2,23 @@ import nextcord
 from nextcord import Interaction
 from Functions.Config import getConfig
 
-async def permissionCheck(user: nextcord.Member, interaction: Interaction, min_requirement: str) -> bool:
+def permissionCheck(user: nextcord.Member, interaction: Interaction, min_requirement: str) -> bool:
     data = getConfig()
 
     # Check everyone perms
-    if min_requirement in data['Everyone']: return True
+    if ( min_requirement in data['Everyone'] ) or ( "is_owner" in data['Everyone'] ): 
+        print("Everyone can access it ;-;")
+        return True
 
     # Check user id for perms
-    elif str(user.id) in data['Users'].keys():
-        if min_requirement in data['Users'][str(user.id)]: return True
-        else: return False
+    elif ( user.id in data['Users'].keys() ):
+        if min_requirement in data['Users'][user.id]: return True
+        elif "is_owner" in data['Users'][user.id]: return True
     
     # Check role id for perms
-    elif str(user.top_role.id) in data['Roles'].keys():
-        if min_requirement in data['Roles'][str(user.top_role.id)]: return True
-        else: return False
+    elif ( user.top_role.id in data['Roles'].keys() ):
+        if min_requirement in data['Roles'][user.top_role.id]: return True
+        elif "is_owner" in data['Roles'][user.top_role.id]: return True
         
     # Return False
     else: return False
