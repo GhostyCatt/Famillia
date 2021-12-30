@@ -6,6 +6,27 @@
             "Arguments": [
                 "User", "Time"
             ]
+        },
+        {
+            "Name": "Ban",
+            "Description": "🔨 Ban a user from the server",
+            "Arguments": [
+                "User", "Reason"
+            ]
+        },
+        {
+            "Name": "Kick",
+            "Description": "🪓 Kick a user from the server",
+            "Arguments": [
+                "User", "Reason"
+            ]
+        },
+        {
+            "Name": "Purge",
+            "Description": "🧹 Purge upto 50 messages from a channel",
+            "Arguments": [
+                "Limit", "Channel"
+            ]
         }
     ]
 }
