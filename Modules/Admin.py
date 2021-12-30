@@ -1,6 +1,7 @@
 import nextcord, datetime, humanfriendly
 from nextcord.ext import commands
 from Functions.Permission import permissionCheck
+from Functions.Response import embed
 
 class Admin(commands.Cog):
     """The Admin commands"""
@@ -10,7 +11,7 @@ class Admin(commands.Cog):
     @nextcord.slash_command(
         name = "timeout",
         description = "⏱️ Timeout a user ( Basically mute them )",
-        guild_ids = [904958479574401064]
+        guild_ids = [ 904958479574401064 ]
     )
     async def timeout(
         self, interaction: nextcord.Interaction,
@@ -22,11 +23,6 @@ class Admin(commands.Cog):
             return
         
         await user.edit(timeout = nextcord.utils.utcnow()+datetime.timedelta(seconds = humanfriendly.parse_timespan(time)))
-
-        embed = nextcord.Embed(
-            description = f"\✅ {user.mention} was timed out for `{time}`.",
-            color = nextcord.Colour.green()
-        )
-        await interaction.response.send_message(embed = embed)
+        await embed(1, f"{user.mention} was timed out for `{time}`", target = interaction)
     
 def setup(bot: commands.Bot): bot.add_cog(Admin(bot))
