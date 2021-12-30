@@ -12,6 +12,9 @@
 **Permission Keys**
 - `is_owner`: can run all the commands and features
 - `can_timeout`: can timeout users
+- `can_ban`: can ban members
+- `can_kick`: can kick members
+- `can_purge`: can purge upto 50 messages from a channel
 
 
 ## Running The Bot
