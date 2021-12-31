@@ -7,7 +7,7 @@
 
 ## Permission Hierarchy
 
-```Note: The permissions associated overwrite the permissions that users role gives them.```
+```Note: The permissions associated with the user overwrite the permissions that users top role gives them.```
 
 **Permission Keys**
 - `is_owner`: can run all the commands and features
