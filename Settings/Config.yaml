@@ -7,12 +7,12 @@ Launch Settings:
 
 # Permission Setup
 Roles:
-  904959906006851584: 
+  914810543209054238: 
     - is_owner
 
 Users:
-  543041032648917022:
+  567767732213383198:
     - is_owner
 
 Everyone:
-  - is_member
+  - is_owner

@@ -10,7 +10,7 @@ class Voice(commands.Cog):
     @nextcord.slash_command(
         name = "song",
         description = "🎶 Pick out a song from the database",
-        guild_ids = [ 904958479574401064 ]
+        guild_ids = [ 913000577397567518 ]
     )
     async def song(
         self, interaction: nextcord.Interaction,
@@ -31,7 +31,7 @@ class Voice(commands.Cog):
     @nextcord.slash_command(
         name = "add_song",
         description = "📝 Add a new song to the bot",
-        guild_ids = [ 904958479574401064 ]
+        guild_ids = [ 913000577397567518 ]
     )
     async def addsong(
         self, interaction: nextcord.Interaction,
@@ -62,7 +62,7 @@ class Voice(commands.Cog):
     @nextcord.slash_command(
         name = "remove_song",
         description = "🔐 Remove a song from the database",
-        guild_ids = [ 904958479574401064 ]
+        guild_ids = [ 913000577397567518 ]
     )
     async def delsong(
         self, interaction: nextcord.Interaction,

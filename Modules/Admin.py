@@ -11,7 +11,7 @@ class Admin(commands.Cog):
     @nextcord.slash_command(
         name = "timeout",
         description = "⏱️ Timeout a user ( Basically mute them )",
-        guild_ids = [ 904958479574401064 ]
+        guild_ids = [ 913000577397567518 ]
     )
     async def timeout(
         self, interaction: nextcord.Interaction,
@@ -28,7 +28,7 @@ class Admin(commands.Cog):
     @nextcord.slash_command(
         name = "ban",
         description = "🔨 Ban a user from the server",
-        guild_ids = [ 904958479574401064 ]
+        guild_ids = [ 913000577397567518 ]
     )
     async def ban(
         self, interaction: nextcord.Interaction,
@@ -45,7 +45,7 @@ class Admin(commands.Cog):
     @nextcord.slash_command(
         name = "kick",
         description = "🪓 Kick a user from the server",
-        guild_ids = [ 904958479574401064 ]
+        guild_ids = [ 913000577397567518 ]
     )
     async def kick(
         self, interaction: nextcord.Interaction,
@@ -62,7 +62,7 @@ class Admin(commands.Cog):
     @nextcord.slash_command(
         name = "purge",
         description = "🧹 Purge upto 50 messages from a channel",
-        guild_ids = [ 904958479574401064 ]
+        guild_ids = [ 913000577397567518 ]
     )
     async def purge(
         self, interaction: nextcord.Interaction,
