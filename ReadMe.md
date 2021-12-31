@@ -15,6 +15,9 @@
 - `can_ban`: can ban members
 - `can_kick`: can kick members
 - `can_purge`: can purge upto 50 messages from a channel
+- `use_song`: use the song command and list songs command
+- `can_add-song`: can add songs
+- `can_remove-song`: can remove songs
 
 
 ## Running The Bot
