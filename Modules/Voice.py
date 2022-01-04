@@ -2,6 +2,7 @@ import nextcord, random, json
 from nextcord.ext import commands
 from Functions.Response import embed
 from Functions.Permission import permissionCheck
+from Functions.Integration import DiscordInteraction
 
 class Voice(commands.Cog):
     def __init__(self, bot: commands.Bot) -> None:
@@ -84,4 +85,65 @@ class Voice(commands.Cog):
         emb = await embed(2, description = "I couldn't find that song in the database... Try to check for spelling errors and try again!")
         await interaction.response.send_message(embed = emb, ephemeral = True)
     
+    @nextcord.slash_command(
+        name = "game",
+        description = "⚡ Start a game activity!",
+        guild_ids = [ 913000577397567518 ]
+    )
+    async def  game(
+        self, interaction: nextcord.Interaction, 
+        game: str = nextcord.SlashOption(
+            name = "game", 
+            description = "The game you want to start", 
+            required = True, 
+            choices = { 
+                "Poker": "poker", 
+                "Chess": "chess", 
+                "Fishing": "fishing", 
+                "Betrayal": "betrayal",
+                "Letter Tile": "letter-tile",
+                "Word Snack": "word-snack",
+                "Doodle Crew": "doodle-crew",
+                "Spellcast": "spellcast",
+                "Awkword": "awkword",
+                "Checkers": "checkers"
+            }
+        )
+    ):
+        """Start a game activity"""
+        if not interaction.user.voice: return await interaction.response.send_message("You aren't in a voice channel!", ephemeral = True)
+        else: channel = interaction.user.voice.channel
+
+        Control = DiscordInteraction(self.bot)
+        Link = await Control.new(channel.id, game)
+
+        embed = nextcord.Embed(
+            title = f"{game.capitalize()}",
+            description = f"Created a new {game.capitalize()} party!\n\nTo get started or join, click **[here](https://discord.gg/{Link})**",
+            color = nextcord.Colour.random()
+        )
+        await interaction.response.send_message(f"https://discord.gg/{Link}", embed = embed)
+    
+    @nextcord.slash_command(
+        name = "youtube",
+        description = "▶️ Start a youtube activity in your channel!",
+        guild_ids = [ 913000577397567518 ]
+    )
+    async def  youtube(
+        self, interaction: nextcord.Interaction
+    ):
+        """Start a youtube activity"""
+        if not interaction.user.voice: return await interaction.response.send_message("You aren't in a voice channel!", ephemeral = True)
+        else: channel = interaction.user.voice.channel
+
+        Control = DiscordInteraction(self.bot)
+        Link = await Control.new(channel.id, 'youtube')
+
+        embed = nextcord.Embed(
+            title = f"YouTube",
+            description = f"Created a new YouTube party!\n\nTo get started or join, click **[here](https://discord.gg/{Link})**",
+            color = nextcord.Colour.random()
+        )
+        await interaction.response.send_message(f"https://discord.gg/{Link}", embed = embed)
+
 def setup(bot: commands.Bot): bot.add_cog(Voice(bot))
