@@ -11,7 +11,7 @@ class Voice(commands.Cog):
     @nextcord.slash_command(
         name = "song",
         description = "🎶 Pick out a song from the database",
-        guild_ids = [ 913000577397567518 ]
+        guild_ids = [ 904958479574401064 ]
     )
     async def song(
         self, interaction: nextcord.Interaction,
@@ -32,7 +32,7 @@ class Voice(commands.Cog):
     @nextcord.slash_command(
         name = "add_song",
         description = "📝 Add a new song to the bot",
-        guild_ids = [ 913000577397567518 ]
+        guild_ids = [ 904958479574401064 ]
     )
     async def addsong(
         self, interaction: nextcord.Interaction,
@@ -63,7 +63,7 @@ class Voice(commands.Cog):
     @nextcord.slash_command(
         name = "remove_song",
         description = "🔐 Remove a song from the database",
-        guild_ids = [ 913000577397567518 ]
+        guild_ids = [ 904958479574401064 ]
     )
     async def delsong(
         self, interaction: nextcord.Interaction,
@@ -88,7 +88,7 @@ class Voice(commands.Cog):
     @nextcord.slash_command(
         name = "game",
         description = "⚡ Start a game activity!",
-        guild_ids = [ 913000577397567518 ]
+        guild_ids = [ 904958479574401064 ]
     )
     async def  game(
         self, interaction: nextcord.Interaction, 
@@ -127,7 +127,7 @@ class Voice(commands.Cog):
     @nextcord.slash_command(
         name = "youtube",
         description = "▶️ Start a youtube activity in your channel!",
-        guild_ids = [ 913000577397567518 ]
+        guild_ids = [ 904958479574401064 ]
     )
     async def  youtube(
         self, interaction: nextcord.Interaction
