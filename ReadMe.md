@@ -31,5 +31,3 @@ $ python Main.py
 ```
 
 This will install all the required libraries and launch the bot for you
-
-```Note: You will need GIT installed for your bot to function, as the bot currently uses a branch of Nextcord for its slash commands.```
